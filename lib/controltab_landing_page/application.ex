@@ -9,8 +9,8 @@ defmodule ControltabLandingPage.Application do
   def start(_type, _args) do
     children = [
       ControltabLandingPageWeb.Telemetry,
-      ControltabLandingPage.Repo,
-      {DNSCluster, query: Application.get_env(:controltab_landing_page, :dns_cluster_query) || :ignore},
+      {DNSCluster,
+       query: Application.get_env(:controltab_landing_page, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: ControltabLandingPage.PubSub},
       # Start the Finch HTTP client for sending emails
       {Finch, name: ControltabLandingPage.Finch},

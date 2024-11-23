@@ -31,7 +31,6 @@ defmodule ControltabLandingPageWeb.Endpoint do
     socket "/phoenix/live_reload/socket", Phoenix.LiveReloader.Socket
     plug Phoenix.LiveReloader
     plug Phoenix.CodeReloader
-    plug Phoenix.Ecto.CheckRepoStatus, otp_app: :controltab_landing_page
   end
 
   plug Phoenix.LiveDashboard.RequestLogger,
